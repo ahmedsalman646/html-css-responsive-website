@@ -12,7 +12,8 @@ body {
 
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
@@ -20,11 +21,12 @@ main {
     background-color: #fff;
     padding: 30px;
     border-radius: 20px;
+    margin-top: 20px;
 }
 
 hr {
     border: 1px solid #d1d1d1;
-    margin: 30px 0 0 0;
+    margin: 30px 0 30px 0;
 }
 
 /* common styles end */
@@ -80,7 +82,7 @@ hr {
 }
 
 .blogSection {
-    margin: 30px 0 30px 0;
+    margin: 0 0 30px 0;
 }
 
 .blog {
@@ -127,6 +129,97 @@ hr {
 
 /* top blogs section end */
 
+/* latest course section start */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.course {
+    width: 252px;
+    height: 269px;
+    border-radius: 15px;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, .2);
+    transition: all ease 1s;
+}
+
+.course:hover {
+    transform: scale(.98) rotate(2deg);
+}
+
+.courseBanneer img {
+    width: 100%;
+    height: 104px;
+}
+
+.courseDetails {
+    padding: 10px;
+}
+
+.courseTitle {
+    font-size: 20px;
+}
+
+.courseAuthor a {
+    font-size: 14px;
+    margin: 10px 0 15px 0;
+    display: inline-block;
+    color: #025464;
+    text-decoration: none;
+    transition: all ease 1s;
+}
+
+.course:hover a {
+    text-decoration: underline;
+}
+
+
+
+.courseInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-star {
+    font-size: 12px;
+}
+
+.fa-star.filled {
+    color: #ED6B4F;
+}
+
+.fa-star.empty {
+    color: #d1d1d1;
+}
+
+.courseRattings span {
+    color: #A2A2A2;
+}
+
+.courseHour {
+    background-color: rgba(2, 84, 100, .2);
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+
+.fa-clock.clockStyle {
+    color: #025464;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.courseHour span {
+    color: #025464;
+    font-weight: bold;
+}
+
+/* latest course section end */
+
+
+
 
 
 
@@ -167,6 +260,24 @@ hr {
         width: 100%;
         height: 100%;
     }
+
+
+
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .course {
+        width: 100%;
+        height: 100%;
+    }
+
+    .courseBanneer img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
 }
 
 @media screen and (min-width: 476.99px) and (max-width: 768px) {
@@ -181,7 +292,48 @@ hr {
     .blogs {
         grid-template-columns: repeat(1, 1fr);
     }
+
+
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .course {
+        width: 100%;
+        height: 100%;
+    }
+
+    .courseBanneer img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
 }
 
 /* small device end */
+/* mediam screen start */
+@media screen and (min-width: 768.99px) and (max-width: 992px) {
+    .container {
+        width: 100%;
+    }
+
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course {
+        width: 100%;
+        height: 100%;
+    }
+
+    .courseBanneer img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+}
+
+/* mediam screen end */
 /* media quries end */
